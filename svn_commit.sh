@@ -1,6 +1,6 @@
 #!/bin/sh
 #add all new files
-svn status | grep "^?" | cut -d ? -f 2 | xargs svn add
+svn status | grep "^?" | cut -d ? -f 2 | xargs svn add 2>/dev/null
 echo -n "Log-Message: "
 read Message
 
