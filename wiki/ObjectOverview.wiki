@@ -17,11 +17,15 @@ pc1tab1=pc:Add_Page("1st Page")
 = Objects =
 
 == PageControl ==
-|| Methods || Description || Example ||
+
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Add_Page(caption) || adds a new tab to the PageControl || pctab=pc:Add_Page("1st Page") ||
 
 == ListView ==
-|| Methods || Description || Example ||
+
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Add_Column(caption) || adds a new column to the Listview || lv:Add_Column("1st Col") ||
 || Add_Item(caption) || adds a new item to the Listview and returns row-number || row=lv:Add_Item("1st Item") ||
 || Set_Item(row,col,caption) || changes col of Item in row  || lv:Set_Item(0,1,"1st Item col 2") ||
@@ -29,21 +33,33 @@ pc1tab1=pc:Add_Page("1st Page")
 || Clear() || clears the Listview || lv:Clear() ||
 
 == Splitter ==
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Set_Clients(C1,C2) || setting the 2 Controls as resizable controls in the splitter || spl:Set_Clients(lv,rg) ||
 
 == Popup ==
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Add_Item(caption,function) || adds a new item to the popup-menu with reference to a lua-function (for onClick)|| function menu_test1()<br>  print("Menuitem1 :)")<br>end<br>p:Add_Item("test1",menu_test1) ||
 
 == Button ==
 
 == RadioGroup ==
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Add_Item(caption) || adds a new item to the RadioGroup|| rg:Add_Item("2nd choice") ||
 
 == CheckGroup ==
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Add_Item(caption) || adds a new item to the CheckGroup || cg:Add_Item("2nd option") ||
 
 == Edit ==
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Get_Text() || gets text of the edit || text=edit:Get_Text() ||
 
 == Memo ==
+=== Methods ===
+|| *Method* || *Description* || *Example* ||
 || Get_Text() || gets text of the memo || text=memo:Get_Text() ||
