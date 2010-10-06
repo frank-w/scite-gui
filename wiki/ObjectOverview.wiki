@@ -104,11 +104,11 @@ here is the sidebar-functionality included (scite.GetSidebarHandle())
 
 === Functions ===
 || *Function* || *Description* || *Example* ||
-|| new(parent,caption) || creates a new Edit<br>parent can be 0,sidebar-handle or pagecontrol-tab || ed=Edit.new(page1,"Text: ") ||
+|| new(parent,caption) || creates a new Edit<br>parent can be 0,sidebar-handle or pagecontrol-tab || `ed=Edit.new(page1,"Text: ")` ||
 
 === Methods ===
 || *Method* || *Description* || *Example* ||
-|| Get_Text() || gets text of the edit || text=edit:Get_Text() ||
+|| Get_Text() || gets text of the edit || `text=edit:Get_Text()` ||
 
 
 == Memo ==
@@ -120,3 +120,12 @@ here is the sidebar-functionality included (scite.GetSidebarHandle())
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Get_Text() || gets text of the memo || text=memo:Get_Text() ||
+
+=Message-Boxes=
+gui.Show_Info("caption","text")
+
+gui.Show_Warning("caption","text")
+
+gui.Show_Error("caption","text")
+
+gui.Show_Question("caption","text") --returning true on yes and false on no
