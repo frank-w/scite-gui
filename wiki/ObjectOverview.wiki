@@ -1,28 +1,43 @@
-#summary One-sentence summary of this page.
+#summary Overview
 #labels Featured
 
 = Overview =
 every object provides a function new() and methods to change properties of the object. 
 functions are appended using . to the classname
 e.g.
+{{{
 pc=PageControl.new(0)
+}}}
 
 new-functions returning the object-variable
 
 methods are appended using : to the object-variable
 e.g.
+{{{
 pc1tab1=pc:Add_Page("1st Page")
+}}}
+
+Scite-GUI-package contains a modified Scite-versions (Scite-Original 2.21 and Scite-ru 2.03.75).
+here is the sidebar-functionality included (scite.GetSidebarHandle())
 
 
 = Objects =
 
 == PageControl ==
 
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(caption) || creates a new PageControl<br>parent can be 0,sidebar-handle or pagecontrol-tab || pc=PageControl.new(page1) ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Add_Page(caption) || adds a new tab to the PageControl || pctab=pc:Add_Page("1st Page") ||
 
 == ListView ==
+
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(caption) || creates a new ListView<br>parent can be 0,sidebar-handle or pagecontrol-tab || lv=ListView.new(page1) ||
 
 === Methods ===
 || *Method* || *Description* || *Example* ||
@@ -33,33 +48,61 @@ pc1tab1=pc:Add_Page("1st Page")
 || Clear() || clears the Listview || lv:Clear() ||
 
 == Splitter ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent,vertical) || creates a new Splitter<br>parent can be 0,sidebar-handle or pagecontrol-tab || spl=Splitter.new(page1,true) ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Set_Clients(C1,C2) || setting the 2 Controls as resizable controls in the splitter || spl:Set_Clients(lv,rg) ||
 
 == Popup ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent) || creates a new Popupmenu<br>parent can be any lua-control || pu=Popup.new(lv) ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Add_Item(caption,function) || adds a new item to the popup-menu with reference to a lua-function (for onClick)|| function menu_test1()<br>  print("Menuitem1 :)")<br>end<br>p:Add_Item("test1",menu_test1) ||
 
 == Button ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent,caption) || creates a new Button<br>parent can be 0,sidebar-handle or pagecontrol-tab || btn=Button.new(page1,"caption") ||
+
 
 == RadioGroup ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent,caption_of_first) || creates a new RadioGroup<br>parent can be 0,sidebar-handle or pagecontrol-tab || rg=RadioGroup.new(page1,"1st choice") ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Add_Item(caption) || adds a new item to the RadioGroup|| rg:Add_Item("2nd choice") ||
 
 == CheckGroup ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent,caption_of_first) || creates a new CheckGroup<br>parent can be 0,sidebar-handle or pagecontrol-tab || cg=CheckGroup.new(page1,"1st choice") ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Add_Item(caption) || adds a new item to the CheckGroup || cg:Add_Item("2nd option") ||
 
 == Edit ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent,caption) || creates a new Edit<br>parent can be 0,sidebar-handle or pagecontrol-tab || ed=Edit.new(page1,"Text: ") ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Get_Text() || gets text of the edit || text=edit:Get_Text() ||
 
 == Memo ==
+=== Functions ===
+|| *Function* || *Description* || *Example* ||
+|| new(parent) || creates a new Edit<br>parent can be 0,sidebar-handle or pagecontrol-tab || me=Memo.new(page1) ||
+
 === Methods ===
 || *Method* || *Description* || *Example* ||
 || Get_Text() || gets text of the memo || text=memo:Get_Text() ||
